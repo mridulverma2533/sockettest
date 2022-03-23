@@ -6,7 +6,7 @@ const wss = new websocket.Server({port:8080},()=>{
 wss.on("connection",(ws)=>{
     ws.on("message",(data)=>{
       console.log("data recived"+data);
-      ws.send(data)
+      ws.send("success")
     })
 })
 wss.on("listening",()=>{
